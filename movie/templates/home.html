@@ -1,2 +1,20 @@
 <h1>Welcome to Home Page, {{ name }}</h1>
 <p>This is the full home page</p>
+
+<form method="GET">
+    <label>Search movie:</label>
+    <input type="text" name="searchMovie" value="{{ searchTerm }}">
+    <input type="submit" value="Search">
+</form>
+
+<h2>Movies</h2>
+
+{% for movie in movies %}
+    <h3>{{ movie.title }}</h3>
+    <img src="{{ movie.image.url }}" alt="{{ movie.title }}" width="200">
+    <p>{{ movie.description }}</p>
+    {% if movie.url %}
+        <a href="{{ movie.url }}">{{ movie.url }}</a>
+    {% endif %}
+    <hr>
+{% endfor %}
