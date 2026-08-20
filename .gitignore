@@ -16,3 +16,6 @@ media/
 
 # Local tooling
 seed.py
+
+# Datasets (too large for git)
+*.csv
