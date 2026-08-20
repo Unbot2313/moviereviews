@@ -3,8 +3,11 @@
 </head>
 
 <!-- <h1>Welcome to Home Page</h1>  -->
-<h1>Welcome to Home Page, {{ name }}</h1>
-<h2>This is the full home page</h2>
+ <div class="p-3">
+    <h1>Welcome to Home Page, {{ name }}</h1>
+    <h2>This is the full home page</h2>
+ </div>
+
 
 <div class="container">
     <form action="">
@@ -17,7 +20,7 @@
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
     <p>Searching for {{searchTerm}}</p>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
         {% for movie in movies %}
             <div class="col">
                 <div class="card h-100">
